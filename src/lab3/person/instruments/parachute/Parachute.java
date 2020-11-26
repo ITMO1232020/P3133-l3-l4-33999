@@ -3,14 +3,14 @@ package lab3.person.instruments.parachute;
 public class Parachute {
     private ParachuteState parachuteState;
 
-    public void open() {
+    public String open() {
         parachuteState = ParachuteState.OPENED;
-        System.out.println(this + " " + parachuteState + " и замедляет падение!");
+        return this + " " + parachuteState + " и замедляет падение!";
     }
 
-    public void close() {
+    public String close() {
         parachuteState = ParachuteState.CLOSED_HOODALIKE;
-        System.out.println(this + " уже " + parachuteState + " и сложен.");
+        return this + " уже " + parachuteState + " и сложен.";
     }
 
     @Override

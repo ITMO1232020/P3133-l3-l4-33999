@@ -35,22 +35,21 @@ public class Person {
         return name + " оглядывается по сторонам...";
     }
 
-    public void setClothingTakeOn(Clothing clothing){
+    public String setClothingTakeOn(Clothing clothing){
         this.clothing = clothing;
-        System.out.println(this + back.takeClothingOn(clothing));
+        return this + back.takeClothingOn(clothing);
     }
 
-    public void setClothingTakeOff(){
+    public String setClothingTakeOff(){
         if (clothing != null){
-            System.out.println(this + back.takeClothingOff(clothing));
+            return this + back.takeClothingOff(clothing);
         }
+        return "Nothing to take off";
     }
 
-    public void jumpWithParachute(Parachute parachute) {
-        printJumpInfo();
-        parachute.open();
-        parachute.close();
-        System.out.println(name + " " + legs.kneelDown());
+    public String jumpWithParachute(Parachute parachute) {
+        printJumpInfo(parachute);
+        return name + " " + legs.kneelDown();
     }
 
     public String breathe(Air air){
@@ -75,7 +74,9 @@ public class Person {
         return Objects.hash(super.hashCode(), name, back, legs);
     }
 
-    public void printJumpInfo(){
+    public void printJumpInfo(Parachute parachute){
         System.out.println(name + " прыгает!");
+        System.out.println(parachute.open());
+        System.out.println(parachute.close());
     }
 }

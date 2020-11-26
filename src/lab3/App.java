@@ -24,8 +24,8 @@ public class App {
 
         Planet unknownPlanet = new UnknownPlanet(surface, freshAir);
 
-        person.setClothingTakeOn(clothing);
-        person.jumpWithParachute(parachute);
+        System.out.println(person.setClothingTakeOn(clothing));
+        System.out.println(person.jumpWithParachute(parachute));
 
         System.out.println(person.sitOn(surface));
         System.out.println(person.lookAround());
