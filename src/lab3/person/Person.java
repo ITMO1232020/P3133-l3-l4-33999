@@ -23,16 +23,16 @@ public class Person {
         return name;
     }
 
-    public void thinking() {
-        System.out.println(this + " думает...");
+    public String thinking() {
+        return this + " думает...";
     }
 
-    public void sitOn(Surface surface) {
-        System.out.println(name + " садится на " + surface.whatTheSurface());
+    public String sitOn(Surface surface) {
+        return name + " садится на " + surface.whatTheSurface();
     }
 
-    public void lookAround() {
-        System.out.println(name + " оглядывается по сторонам...");
+    public String lookAround() {
+        return name + " оглядывается по сторонам...";
     }
 
     public void setClothingTakeOn(Clothing clothing){
@@ -47,15 +47,14 @@ public class Person {
     }
 
     public void jumpWithParachute(Parachute parachute) {
-        System.out.println(name + " прыгает!");
+        printJumpInfo();
         parachute.open();
-        System.out.println(name + " приземлился.");
         parachute.close();
         System.out.println(name + " " + legs.kneelDown());
     }
 
-    public void breathe(Air air){
-        System.out.println(this + " дышит " + air + ".");
+    public String breathe(Air air){
+        return this + " дышит " + air + ".";
     }
 
     @Override
@@ -74,5 +73,9 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), name, back, legs);
+    }
+
+    public void printJumpInfo(){
+        System.out.println(name + " прыгает!");
     }
 }

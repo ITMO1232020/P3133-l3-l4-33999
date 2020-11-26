@@ -9,12 +9,12 @@ public class Air implements Atmosphere {
         isMove = true;
     }
 
-    public void move() {
+    public String move() {
         if (getIsMove()) {
-            System.out.println("Дует " + this + "...");
+            return "Дует " + this + "...";
         }
         else{
-            System.out.println("Тихо, " + this + " не дует.");
+            return "Тихо, " + this + " не дует.";
         }
     }
 

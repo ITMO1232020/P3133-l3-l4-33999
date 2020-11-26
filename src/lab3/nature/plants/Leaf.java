@@ -30,12 +30,12 @@ public class Leaf {
         this.leafSize = leafSize;
     }
 
-    public void move(Air air) {
+    public String move(Air air) {
         if (air.getIsMove()) {
-            System.out.println("Листья колышутся.");
+            return "Листья колышутся.";
         }
         else{
-            System.out.println("Листья не колышутся.");
+            return "Листья не колышутся.";
         }
     }
 

@@ -26,21 +26,15 @@ public class App {
 
         person.setClothingTakeOn(clothing);
         person.jumpWithParachute(parachute);
-        person.sitOn(surface);
-        person.lookAround();
-        leaf.move(freshAir);
 
-        person.thinking();
-        freshAir.move();
+        System.out.println(person.sitOn(surface));
+        System.out.println(person.lookAround());
+        System.out.println(leaf.move(freshAir));
+
+        System.out.println(person.thinking());
+        System.out.println(freshAir.move());
 
         person.setClothingTakeOff();
-        unknownPlanet.getAir();
-        person.breathe(freshAir);
-
-
-        Air air = new Air();
-        Surface earthSurface = new Ground();
-        Planet earth = new Earth(earthSurface, air);
-        earth.getAir();
+        System.out.println(person.breathe(freshAir));
     }
 }

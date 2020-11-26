@@ -3,12 +3,12 @@ package lab3.person.instruments;
 import lab3.person.Person;
 
 public class SpaceSuit extends Clothing {
-    public void takeOn() {
-        System.out.println("Надевается скафандр!");
+    public String takeOn() {
+        return "Надевается скафандр!";
     }
 
-    public void takeOff() {
-        System.out.println("Снимается скафандр!");
+    public String takeOff() {
+        return "Снимается скафандр!";
     }
 
     @Override
